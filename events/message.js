@@ -7,9 +7,9 @@ module.exports.run = async (client, message) => {
 
     let prefix = process.env.PREFIX;
 
-    if (message.mentions.has("686226185163898917") && !message.content.includes("@everyone")) {
+    if (message.mentions.has(process.env.BOT_ID) && !message.content.includes("@everyone")) {
         if (!message.content.includes("@here")) {
-            message.reply("My prefix is `" + prefix);
+            message.reply("My prefix is `" + prefix + "`");
         }
     }
 

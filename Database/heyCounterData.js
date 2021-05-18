@@ -87,7 +87,7 @@ module.exports.getAllUser = async function () {
         ORDER BY total ASC
         LIMIT 20`;
 
-    const values = [discord_id];
+    const values = [];
     try {
         const res = await pool.query(query_string, values);
         return res.rows;

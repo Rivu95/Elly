@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 
     //embed creation
     const embed = new Discord.MessageEmbed()
-        .setColor()
+        .setColor("#b00b69")
         .setDescription("Hey Guys Leader Board! POG")
         .setDescription(desc)
         .setTimestamp()
