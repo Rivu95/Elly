@@ -58,4 +58,4 @@ process.on("unhandledRejection", error => {
 });
 
 //------------------------------- Logging In -------------------------------//
-client.login(process.env.bot_token);
+client.login(process.env.DISCORD_TOKEN);

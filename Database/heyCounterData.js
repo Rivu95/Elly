@@ -80,7 +80,7 @@ module.exports.getUser = async function (discord_id) {
 }
 
 // GET all hey guys user info from database
-module.exports.getAllUser = async function (discord_id) {
+module.exports.getAllUser = async function () {
 
     const query_string =
         `SELECT * FROM public."lina_hey_counter"

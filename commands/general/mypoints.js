@@ -11,4 +11,15 @@ module.exports = {
 
 module.exports.run = async (client, message, args) => {
 
+    //collecting Data from DB
+    const user_data = await DB.getUser(message.author.id);
+
+    if (!user_data) return message.reply("You didn't event sent a single hay guys! Lul");
+
+    const embed = new Discord.MessageEmbed()
+        .setColor()
+        .setTitle(`Hey Guys Data of ${message.author}`)
+        .setDescription(`Total heys: \`${user_data.total}\`\nCurrent Streak: \`${user_data.count}\`\nError: \`${user_data.error}\``)
+
+    return message.channel.send(embed);
 }
