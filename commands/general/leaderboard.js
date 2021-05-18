@@ -17,7 +17,8 @@ module.exports.run = async (client, message, args) => {
     let desc = `\`#   PTS   ERR   NAME          \`\n`;
     let index = 1;
     for (const data of top) {
-        desc += `\`${index.toString().padEnd(3, " ")}\` \`${data.total.toString().padEnd(5, " ")}\` \`${message.guild.members.cache.get(data.discord_id).tag}\`\n`
+        desc += `\`${index.toString().padEnd(3, " ")}\` \`${data.total.toString().padEnd(5, " ")}\` \`${message.guild.members.cache.get(data.discord_id).tag}\`\n`;
+        index++;
     }
 
     //embed creation
