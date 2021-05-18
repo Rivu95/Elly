@@ -1,0 +1,26 @@
+{
+  "name": "elly",
+  "version": "1.0.0",
+  "description": "Discord bot for Lina Graphic Designs server",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rivu95/Elly.git"
+  },
+  "keywords": [
+    "Elly"
+  ],
+  "author": "Niladri Ghosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rivu95/Elly/issues"
+  },
+  "homepage": "https://github.com/Rivu95/Elly#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.2"
+  }
+}
