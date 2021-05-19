@@ -22,7 +22,8 @@ module.exports.run = async (client, message) => {
         } else {
             await DB.addUser(message.author.id);
             await DB.updateUserErrors(message.author.id);
-
+            let member = message.guild.members.cache.get(message.author.id);
+            member.roles.add(message.guild.roles.cache.get(process.env.BYE_GUYS_ROLE));
             return message.reply(`Only <:HeyGuys:827310990370275338> baka!`);
         }
     }

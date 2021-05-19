@@ -51,10 +51,11 @@ module.exports.updateUserErrors = async function (discord_id) {
 
     const query_string =
         `UPDATE public."lina_hey_counter" 
-        SET error = error + 1
+        SET error = error + 1,
+        count = $2
         WHERE discord_id = $1`;
 
-    const values = [discord_id];
+    const values = [discord_id, 0];
     try {
         const res = await pool.query(query_string, values);
     } catch (err) {
@@ -84,7 +85,7 @@ module.exports.getAllUser = async function () {
 
     const query_string =
         `SELECT * FROM public."lina_hey_counter"
-        ORDER BY total ASC
+        ORDER BY total DESC
         LIMIT 20`;
 
     const values = [];

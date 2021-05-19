@@ -4,8 +4,7 @@ const { Client, Intents } = require('discord.js');
 const fs = require("fs");
 require('dotenv').config();
 
-const client = new Client({ ws: { intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MESSAGE_REACTIONS"] } });
-
+const client = new Discord.Client({ ws: { intents: Intents.ALL } });
 client.once('ready', () => {
 	console.log('Elly is ready');
 	client.user.setActivity("You Spam[-]", { type: "WATCHING" });

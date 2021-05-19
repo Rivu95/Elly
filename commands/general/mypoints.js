@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 
     const embed = new Discord.MessageEmbed()
         .setColor("#b00b69")
-        .setTitle(`Hey Guys Data of ${message.author}`)
+        .setTitle(`Hey Guys Data of ${message.author.username}#${message.author.discriminator}`)
         .setDescription(`Total heys: \`${user_data.total}\`\nCurrent Streak: \`${user_data.count}\`\nError: \`${user_data.error}\``)
 
     return message.channel.send(embed);
